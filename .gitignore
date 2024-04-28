@@ -1,0 +1,9 @@
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+env/bin/
+env/lib/
+env/lib/python3.9/site-packages/tzdata/zoneinfo/Asia/Baku
