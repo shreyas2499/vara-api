@@ -24,5 +24,3 @@ class MonthlyConsumption(models.Model):
     oct = models.FloatField()
     nov = models.FloatField()
     dec = models.FloatField()
-
-# password: nyutandon
