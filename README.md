@@ -7,8 +7,8 @@ This project was bootstrapped with [Django](https://www.djangoproject.com/).
 - Frontend Server: https://main.d271r6z8tdry4i.amplifyapp.com/
 
 ## Repository Links
-- Backend Server: https://github.com/shreyas2499/vara-api
-- Frontend Server: https://github.com/shreyas2499/vara-ui
+- Backend Repository: https://github.com/shreyas2499/vara-api
+- Frontend Repository: https://github.com/shreyas2499/vara-ui
 
 ### `Note` 
   Since, I was not able to buy a domain name for this assessment, the browser throws a SSL certificate issue. I have added a manually signed certificate, but browsers do not completely accept it. So in order to get the production application running, please follow the steps below:
