@@ -27,8 +27,6 @@ This project was bootstrapped with [Django](https://www.djangoproject.com/).
 - Product Deployed on AWS
   1) Frontend Deployed using AWS Amplify
   2) Backend Deployed using AWS ElasticBeanstalk
-     
-- REST based APIs
 
 - Database stores all the relevant information. Has the following tables
   1) MonthlyConsumption: Stores the data from the excel provided (https://docs.google.com/spreadsheets/d/1xYtvMLc8LhBFOgovS8RLCQa2yso7C0ViuyFgXZdt6Z4/edit#gid=1381247138)
