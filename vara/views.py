@@ -17,6 +17,39 @@ from .models import User
 
 some_salt = 'some_salt'
 
+@csrf_exempt
+def userPreferences(request):
+    data = json.loads(request.body)
+    email = data.get("email")
+    months = data.get("months", [])
+    graphs = data.get("graphs", [])
+
+    try: 
+        user = User.objects.get(email=email)
+        if(len(months)>0):
+            user.preferences["months"] = months
+        elif(len(graphs) > 0):
+            user.preferences["graphs"] = graphs
+        user.save()
+    except Exception as e:
+        return JsonResponse({"message": "User not found"})
+
+    return JsonResponse({"message": "Preferences stored"})
+
+
+@csrf_exempt
+def getUserPreferences(request):
+    data = json.loads(request.body)
+    email = data.get("email")
+
+    userPref = User.objects.get(email=email).preferences
+
+    return JsonResponse({"message": "Preferences fetched", "months": userPref["months"], "graphs": userPref["graphs"] })
+
+
+
+def redirectToUi(request):
+    return JsonResponse({"message": "Please visit https://main.d271r6z8tdry4i.amplifyapp.com/ to view the UI"})
 
 def energy(request):
     allValues = list(MonthlyConsumption.objects.all().values())
@@ -29,7 +62,6 @@ def energy(request):
                 "data": [val[x] for x in val.keys() if x not in ["id", "field"]],
                 "graphLabel": [val[x] for x in val.keys() if x in ["field"]][0]
             }
-        graphVals
 
     return JsonResponse({"vals": graphVals})
 
@@ -46,7 +78,7 @@ def login(request):
         return JsonResponse({"message": "User not found", "status":500})
 
     if check_password(password, user.password):
-        return JsonResponse({"message": "User logged in"})
+        return JsonResponse({"message": "User logged in", "email": email})
     else:
         return JsonResponse({"message": "Incorrect password", "status":500})
 

@@ -17,8 +17,10 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import include, path
+from vara import views
 
 urlpatterns = [
+    path("", views.redirectToUi),
     path('vara/', include('vara.urls')),
     path('admin/', admin.site.urls),
 ]
