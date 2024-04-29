@@ -34,8 +34,7 @@ This project was bootstrapped with [Django](https://www.djangoproject.com/).
   1) MonthlyConsumption: Stores the data from the excel provided (https://docs.google.com/spreadsheets/d/1xYtvMLc8LhBFOgovS8RLCQa2yso7C0ViuyFgXZdt6Z4/edit#gid=1381247138)
   2) User: Stores user information such as email, hashedPassword and a preferences json.
 
-- Demo account
-  A demo account is created with the credentials for the purpose of testing. Please find the credentials here:
+- A demo account is created with the credentials for the purpose of testing. Please find the credentials here:
   - email: admin@gmail.com
   - password: admin
 
