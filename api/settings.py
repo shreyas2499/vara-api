@@ -99,7 +99,7 @@ DATABASES = {
 #         "ENGINE": "django.db.backends.mysql",
 #         "NAME": "safe_environment",
 #         "USER": "root",
-#         "PASSWORD": "LGsoft123@",
+#         "PASSWORD": "***",
 #         "HOST": "localhost",
 #         "PORT": "3306",
 #     }
